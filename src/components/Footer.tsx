@@ -33,7 +33,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
           {/* Col 1: Brand & Slogan */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <Logo variant="light" height={40} />
+              <Logo variant="light" height={52} />
             </div>
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm font-normal">
@@ -151,7 +151,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking }) => {
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-500 text-[11px] font-normal">
           <p>© {new Date().getFullYear()} Complejo Deportivo Predio Norte. Todos los derechos reservados.</p>
           <p className="flex items-center gap-1 text-slate-400">
-            <span>Calle 41 e/ 7 y 8 • La Plata, Buenos Aires</span>
+            <span>{COMPLEX_INFO.address}</span>
           </p>
         </div>
 

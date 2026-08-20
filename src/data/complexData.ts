@@ -5,7 +5,7 @@ export const COMPLEX_INFO = {
   subname: 'Complejo Deportivo',
   slogan: 'Elegí Predio',
   description: 'El complejo deportivo referente de La Plata. 3 canchas de césped sintético de fútbol 5 y 6 con iluminación LED, boxeo, pilates reformer, escuelita infantil formativa y salón privado para cumpleaños y eventos.',
-  address: 'Calle 41 e/ 7 y 8, La Plata, Buenos Aires',
+  address: 'C. 41 612, B1902AJZ La Plata, Provincia de Buenos Aires',
   phone: '427-7475',
   phoneFormatted: '(0221) 427-7475',
   whatsapp: '2215957475',
@@ -19,7 +19,7 @@ export const COMPLEX_INFO = {
   facebookUrl: 'https://www.facebook.com/complejodeportivopredionorte/?_rdr',
   partnerGym: 'Mood Gimnasio',
   partnerGymHandle: '@moodgimnasio',
-  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Calle+41+entre+7+y+8+La+Plata+Buenos+Aires',
+  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=C.+41+612,+B1902AJZ+La+Plata,+Provincia+de+Buenos+Aires',
   coordinates: {
     lat: -34.9084,
     lng: -57.9542,

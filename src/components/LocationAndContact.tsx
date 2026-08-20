@@ -188,29 +188,39 @@ export const LocationAndContact: React.FC = () => {
                 </a>
               </div>
 
-              {/* Map Canvas */}
-              <div className="w-full h-56 rounded-2xl bg-slate-100 border border-slate-200 relative flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 opacity-40 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] bg-[size:2.5rem_2.5rem]" />
+              {/* Google Maps Canvas with Custom Overlay */}
+              <a 
+                href={COMPLEX_INFO.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block relative w-full h-56 rounded-2xl overflow-hidden border border-slate-200 group cursor-pointer"
+                title="Abrir en Google Maps"
+              >
+                {/* Overlay to block iframe pointer events so the link works */}
+                <div className="absolute inset-0 z-10 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
                 
-                <div className="absolute top-1/2 left-0 right-0 h-5 bg-white border-y border-slate-300 flex items-center justify-center">
-                  <span className="text-[10px] font-bold text-slate-600 tracking-widest uppercase">CALLE 41</span>
-                </div>
-                <div className="absolute top-0 bottom-0 left-1/3 w-5 bg-white border-x border-slate-300 flex items-center justify-center">
-                  <span className="text-[10px] font-bold text-slate-600 tracking-widest uppercase rotate-90">CALLE 7</span>
-                </div>
-                <div className="absolute top-0 bottom-0 right-1/3 w-5 bg-white border-x border-slate-300 flex items-center justify-center">
-                  <span className="text-[10px] font-bold text-slate-600 tracking-widest uppercase rotate-90">CALLE 8</span>
-                </div>
+                <iframe
+                  title="Ubicación Predio Norte"
+                  src={`https://maps.google.com/maps?width=100%25&height=100%25&hl=es&q=${encodeURIComponent(COMPLEX_INFO.address)}+%28Predio%20Norte%29&t=&z=16&ie=UTF8&iwloc=&output=embed`}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, pointerEvents: 'none' }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
 
-                {/* Location Marker Pin */}
-                <div className="relative z-10 flex flex-col items-center animate-bounce">
-                  <div className="px-3.5 py-1.5 rounded-xl bg-[#058343] text-white font-bold text-xs shadow-md border border-emerald-400 flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                    <span>PREDIO NORTE</span>
+                {/* Custom Green Bouncing Pin Overlay */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[100%] z-20 pointer-events-none drop-shadow-xl">
+                  <div className="flex flex-col items-center animate-bounce" style={{ animationDuration: '2.5s' }}>
+                    <div className="px-3.5 py-1.5 rounded-xl bg-[#058343] text-white font-bold text-xs shadow-md border border-emerald-400/50 flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-white animate-pulse" style={{ animationDuration: '1.5s' }} />
+                      <span>PREDIO NORTE</span>
+                    </div>
+                    <div className="w-3 h-3 bg-[#058343] rotate-45 -mt-1.5" />
                   </div>
-                  <div className="w-3 h-3 bg-[#058343] rotate-45 -mt-1.5 shadow" />
                 </div>
-              </div>
+              </a>
             </div>
 
           </div>

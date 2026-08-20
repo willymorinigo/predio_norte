@@ -103,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onSelectBooking, activeSection }
             onClick={(e) => scrollToSection(e, '#inicio')}
             className="flex items-center group cursor-pointer"
           >
-            <Logo height={38} showText={true} />
+            <Logo height={52} showText={true} />
           </a>
 
           {/* Desktop Nav Links */}

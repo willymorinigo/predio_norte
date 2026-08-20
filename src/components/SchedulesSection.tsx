@@ -1,24 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { COMPLEX_INFO } from '../data/complexData';
 import { Clock, Calendar, ShieldCheck } from 'lucide-react';
 
 export const SchedulesSection: React.FC = () => {
-  const [filter, setFilter] = useState<'all' | 'futbol' | 'boxeo' | 'pilates' | 'escuelita' | 'cumpleanos'>('all');
-
   const scheduleCards = [
-    {
-      id: 'general',
-      category: 'all',
-      title: 'Horarios Generales del Predio',
-      badge: 'APERTURA Y CIERRE',
-      icon: '⏰',
-      items: [
-        { label: 'Lunes a Viernes', value: '08:00 a 23:30 hs' },
-        { label: 'Sábados', value: '10:00 a 23:30 hs' },
-        { label: 'Domingos', value: '13:00 a 23:30 hs' },
-      ],
-      note: '3 Canchas de fútbol sintético disponibles en todas las franjas.',
-    },
     {
       id: 'boxeo',
       category: 'boxeo',
@@ -72,10 +57,6 @@ export const SchedulesSection: React.FC = () => {
     },
   ];
 
-  const filteredCards = filter === 'all' 
-    ? scheduleCards 
-    : scheduleCards.filter(c => c.category === filter || c.category === 'all');
-
   return (
     <section id="horarios" className="py-16 sm:py-20 bg-white border-t border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -92,34 +73,11 @@ export const SchedulesSection: React.FC = () => {
           <p className="text-slate-500 text-sm sm:text-base font-normal">
             Consultá los días y horarios exactos de cada disciplina para organizar tu semana.
           </p>
-
-          {/* Filter Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
-            {[
-              { id: 'all', label: 'Todos' },
-              { id: 'boxeo', label: 'Boxeo' },
-              { id: 'pilates', label: 'Pilates' },
-              { id: 'escuelita', label: 'Escuelita' },
-              { id: 'cumpleanos', label: 'Cumpleaños' },
-            ].map((f) => (
-              <button
-                key={f.id}
-                onClick={() => setFilter(f.id as any)}
-                className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all ${
-                  filter === f.id
-                    ? 'bg-[#058343] text-white shadow-xs'
-                    : 'bg-slate-50 text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200/80'
-                }`}
-              >
-                {f.label}
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-          {filteredCards.map((card) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+          {scheduleCards.map((card) => (
             <div
               key={card.id}
               className="bg-[#F8FAFC] border border-slate-200/80 rounded-3xl p-6 flex flex-col justify-between shadow-xs hover:border-[#058343]/30 transition-all"

@@ -31,7 +31,7 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle: 'Césped Sintético Pro • Iluminación LED 400W',
     category: 'Fútbol Sintético',
     description: '3 canchas de fútbol 5 y 6 con césped sintético techado y protegido. Turnos diurnos y nocturnos, vestuarios completos y tercer tiempo.',
-    imageUrl: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=2000&q=85',
+    imageUrl: '/futbol.jpeg',
     badge: '3 CANCHAS PRO',
     icon: '⚽',
     scheduleText: 'Lunes a Domingo de 08:00 a 23:30 hs'
@@ -43,7 +43,7 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle: 'Bolsas Everlast • Circuitos de Cardio y Técnica',
     category: 'Boxeo Recreativo',
     description: 'Entrenamiento recreativo y acondicionamiento físico para todos los niveles, enfocado en salud, coordinación y descarga de energía.',
-    imageUrl: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=2000&q=85',
+    imageUrl: '/boxeo.jpeg',
     badge: 'BOLSAS EVERLAST',
     icon: '🥊',
     scheduleText: 'Lun, Mié y Vie: 08, 16, 17, 18, 19 hs • Mar y Jue: 17 y 18 hs'
@@ -55,7 +55,7 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle: 'Chicos y Chicas de 4 a 12 Años • Juegos y Deportes',
     category: 'Iniciación Deportiva',
     description: 'Nenes y nenas aprendiendo deportes mediante juegos dinámicos, motricidad, compañerismo y diversión en un entorno seguro.',
-    imageUrl: 'https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=2000&q=85',
+    imageUrl: '/iniciacion.jpeg',
     badge: '4 A 12 AÑOS',
     icon: '👦',
     scheduleText: 'Mar y Jue (4-8 años) / Lun y Vie (9-12 años) • 17:00 a 18:30 hs'
@@ -67,7 +67,7 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle: 'Camas Reformer Completas • Grupos Reducidos',
     category: 'Pilates Reformer',
     description: 'Tonificación muscular profunda, corrección postural, flexibilidad y bienestar integral con atención personalizada.',
-    imageUrl: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=2000&q=85',
+    imageUrl: '/pilates.jpeg',
     badge: 'CAMAS REFORMER',
     icon: '🧘‍♀️',
     scheduleText: 'Turnos mañana de 08:00 a 13:00 y tarde de 15:00 a 21:00 hs'
@@ -79,7 +79,7 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle: 'Cancha Exclusiva + Salón Privado y Pelotero',
     category: 'Cumpleaños & Festejos',
     description: 'Festejos infantiles y familiares inolvidables con profesor a cargo para coordinar partidos y juegos, pelotero y quincho.',
-    imageUrl: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=2000&q=85',
+    imageUrl: '/cumple.jpeg',
     badge: 'SALÓN PRIVADO',
     icon: '🎂',
     scheduleText: 'Sábados, Domingos y Feriados disponibles'
@@ -91,7 +91,7 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle: 'El Lugar de Encuentro con Amigos Post-Partido',
     category: 'Tercer Tiempo',
     description: 'Bebidas heladas, minutas, parrilla y espacio social para disfrutar la pasión del deporte con amigos luego del partido.',
-    imageUrl: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=2000&q=85',
+    imageUrl: '/tercer_tiempo.jpeg',
     badge: 'ESPACIO SOCIAL',
     icon: '🍻',
     scheduleText: 'Abierto todos los días de 08:00 a 23:30 hs'
@@ -140,12 +140,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
   return (
     <section 
       id="inicio" 
-      className="relative w-full overflow-hidden bg-slate-950 pt-20 sm:pt-24 select-none"
+      className="relative w-full overflow-hidden bg-slate-950 pt-20 sm:pt-24 select-none h-[100svh] min-h-[680px] flex flex-col"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* FULL WIDTH DYNAMIC SLIDER CONTAINER */}
-      <div className="relative w-full h-[590px] sm:h-[630px] lg:h-[670px]">
+      <div className="relative w-full flex-1">
         
         {/* Background Images with Smooth Crossfade */}
         {HERO_SLIDES.map((slide, idx) => (
