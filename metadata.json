@@ -1,0 +1,6 @@
+{
+  "name": "Predio Norte - Complejo Deportivo",
+  "description": "Sitio web oficial del Complejo Deportivo Predio Norte en La Plata. Reserva de canchas de fútbol 5 y 6, boxeo, pilates, escuelita infantil, cumpleaños y actividades.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
