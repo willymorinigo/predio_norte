@@ -31,7 +31,7 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle: 'Césped Sintético Pro • Iluminación LED 400W',
     category: 'Fútbol Sintético',
     description: '3 canchas de fútbol 5 y 6 con césped sintético techado y protegido. Turnos diurnos y nocturnos, vestuarios completos y tercer tiempo.',
-    imageUrl: '/predionorte/futbol.jpeg',
+    imageUrl: `${import.meta.env.BASE_URL}futbol.jpeg`,
     badge: '3 CANCHAS PRO',
     icon: '⚽',
     scheduleText: 'Lunes a Domingo de 08:00 a 23:30 hs'
@@ -43,7 +43,7 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle: 'Bolsas Everlast • Circuitos de Cardio y Técnica',
     category: 'Boxeo Recreativo',
     description: 'Entrenamiento recreativo y acondicionamiento físico para todos los niveles, enfocado en salud, coordinación y descarga de energía.',
-    imageUrl: '/predionorte/boxeo.jpeg',
+    imageUrl: `${import.meta.env.BASE_URL}boxeo.jpeg`,
     badge: 'BOLSAS EVERLAST',
     icon: '🥊',
     scheduleText: 'Lun, Mié y Vie: 08, 16, 17, 18, 19 hs • Mar y Jue: 17 y 18 hs'
@@ -55,7 +55,7 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle: 'Chicos y Chicas de 4 a 12 Años • Juegos y Deportes',
     category: 'Iniciación Deportiva',
     description: 'Nenes y nenas aprendiendo deportes mediante juegos dinámicos, motricidad, compañerismo y diversión en un entorno seguro.',
-    imageUrl: '/predionorte/iniciacion.jpeg',
+    imageUrl: `${import.meta.env.BASE_URL}iniciacion.jpeg`,
     badge: '4 A 12 AÑOS',
     icon: '👦',
     scheduleText: 'Mar y Jue (4-8 años) / Lun y Vie (9-12 años) • 17:00 a 18:30 hs'
@@ -67,7 +67,7 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle: 'Camas Reformer Completas • Grupos Reducidos',
     category: 'Pilates Reformer',
     description: 'Tonificación muscular profunda, corrección postural, flexibilidad y bienestar integral con atención personalizada.',
-    imageUrl: '/predionorte/pilates.jpeg',
+    imageUrl: `${import.meta.env.BASE_URL}pilates.jpeg`,
     badge: 'CAMAS REFORMER',
     icon: '🧘‍♀️',
     scheduleText: 'Turnos mañana de 08:00 a 13:00 y tarde de 15:00 a 21:00 hs'
@@ -79,7 +79,7 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle: 'Cancha Exclusiva + Salón Privado y Pelotero',
     category: 'Cumpleaños & Festejos',
     description: 'Festejos infantiles y familiares inolvidables con profesor a cargo para coordinar partidos y juegos, pelotero y quincho.',
-    imageUrl: '/predionorte/cumple.jpeg',
+    imageUrl: `${import.meta.env.BASE_URL}cumple.jpeg`,
     badge: 'SALÓN PRIVADO',
     icon: '🎂',
     scheduleText: 'Sábados, Domingos y Feriados disponibles'
@@ -91,7 +91,7 @@ const HERO_SLIDES: HeroSlide[] = [
     subtitle: 'El Lugar de Encuentro con Amigos Post-Partido',
     category: 'Tercer Tiempo',
     description: 'Bebidas heladas, minutas, parrilla y espacio social para disfrutar la pasión del deporte con amigos luego del partido.',
-    imageUrl: '/predionorte/tercer_tiempo.jpeg',
+    imageUrl: `${import.meta.env.BASE_URL}tercer_tiempo.jpeg`,
     badge: 'ESPACIO SOCIAL',
     icon: '🍻',
     scheduleText: 'Abierto todos los días de 08:00 a 23:30 hs'

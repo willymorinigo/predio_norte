@@ -16,7 +16,7 @@ export const Logo: React.FC<LogoProps> = ({
   return (
     <div className={`inline-flex items-center select-none ${className}`}>
       <img 
-        src="/logo.svg" 
+        src={`${import.meta.env.BASE_URL}logo.svg`} 
         alt="Predio Norte"
         style={{ height: typeof height === 'number' ? `${height}px` : height, width: 'auto' }}
         className="drop-shadow-sm transition-transform duration-200 hover:scale-[1.02]"
