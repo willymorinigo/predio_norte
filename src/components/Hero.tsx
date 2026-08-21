@@ -140,7 +140,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
   return (
     <section 
       id="inicio" 
-      className="relative w-full overflow-hidden bg-slate-950 pt-20 sm:pt-24 select-none h-[100svh] min-h-[680px] flex flex-col"
+      className="relative w-full overflow-hidden bg-slate-950 select-none h-[100svh] min-h-[680px] flex flex-col"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -168,37 +168,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
         ))}
 
         {/* Hero Overlay Content */}
-        <div className="relative z-20 w-full h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-between py-6 sm:py-8">
+        <div className="relative z-20 w-full h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col pt-28 sm:pt-36 pb-6 sm:pb-8">
           
-          {/* Top Brand Badges - Stacked Crossfade to avoid jumps */}
-          <div className="relative h-9 flex items-center justify-between">
-            {HERO_SLIDES.map((slide, idx) => (
-              <div
-                key={`badge-${slide.id}`}
-                className={`absolute inset-0 flex items-center justify-between transition-all duration-500 ease-out ${
-                  idx === currentIndex 
-                    ? 'opacity-100 translate-y-0 pointer-events-auto' 
-                    : 'opacity-0 -translate-y-2 pointer-events-none'
-                }`}
-              >
-                <div className="flex items-center gap-2">
-                  <span className="bg-[#058343] text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
-                    <span>{slide.icon}</span>
-                    <span>{slide.category}</span>
-                  </span>
-                  <span className="bg-[#e31f24] text-white text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
-                    {slide.badge}
-                  </span>
-                </div>
-
-                <div className="hidden md:flex items-center gap-2 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs text-white/90 border border-white/15 font-medium">
-                  <Clock className="w-3.5 h-3.5 text-[#058343]" />
-                  <span>{slide.scheduleText}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-
           {/* Center / Main Typography Area (Fixed height container with stacked crossfade) */}
           <div className="relative w-full max-w-3xl my-auto">
             
