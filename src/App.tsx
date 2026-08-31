@@ -51,6 +51,22 @@ export default function App() {
     }
   };
 
+  const handleNavigateToSection = (sectionId: string) => {
+    if (sectionId === 'turnero') {
+      handleOpenBooking('futbol');
+      return;
+    }
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: elementPosition - navHeight,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-[#058343] selection:text-white flex flex-col">
       {/* Fixed Sticky Header */}
@@ -104,8 +120,10 @@ export default function App() {
         onOpenBooking={() => handleOpenBooking('futbol')} 
       />
 
-      {/* 11. Floating WhatsApp Assistant */}
-      <WhatsAppFloatingButton />
+      {/* 11. Floating WhatsApp Assistant & Chatbot */}
+      <WhatsAppFloatingButton 
+        onNavigateToSection={handleNavigateToSection} 
+      />
     </div>
   );
 }
