@@ -38,9 +38,9 @@ export const ChatbotModal: React.FC<ChatbotModalProps> = ({
     {
       id: 'welcome',
       sender: 'bot',
-      text: `👋 ¡Hola! Soy el **Asistente Virtual de Predio Norte**.\n\n¿En qué te puedo ayudar hoy? Podés escribir tu consulta o elegir una de las opciones frecuentes para guiarte y coordinar por WhatsApp:`,
+      text: `👋 ¡Hola! Soy el **Asistente Virtual de Predio Norte**.\n\n¿En qué te puedo ayudar hoy? Escribí tu consulta sobre canchas, precios o escuelita para que pueda guiarte:`,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-      suggestions: INITIAL_SUGGESTIONS,
+      suggestions: [],
       action: {
         type: 'whatsapp',
         label: 'Chatear directo con Recepción',
@@ -100,9 +100,9 @@ export const ChatbotModal: React.FC<ChatbotModalProps> = ({
       {
         id: `welcome-${Date.now()}`,
         sender: 'bot',
-        text: `👋 ¡Hola nuevamente! Soy el **Asistente Virtual de Predio Norte**.\n\nElegí un tema o escribime tu consulta sobre canchas de fútbol, escuelita, boxeo, pilates, o festejos de cumpleaños:`,
+        text: `👋 ¡Hola nuevamente! Soy el **Asistente Virtual de Predio Norte**.\n\nEscribime tu consulta sobre canchas de fútbol, escuelita, boxeo, pilates, o festejos de cumpleaños:`,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
-        suggestions: INITIAL_SUGGESTIONS,
+        suggestions: [],
         action: {
           type: 'whatsapp',
           label: 'Chatear directo con Recepción',
@@ -305,21 +305,6 @@ export const ChatbotModal: React.FC<ChatbotModalProps> = ({
                           <ArrowRight className="w-3 h-3 text-slate-400" />
                         </button>
                       )}
-                    </div>
-                  )}
-
-                  {/* Suggestion Chips */}
-                  {msg.suggestions && msg.suggestions.length > 0 && (
-                    <div className="pt-1 flex flex-wrap gap-1.5">
-                      {msg.suggestions.map((sug, sIdx) => (
-                        <button
-                          key={sIdx}
-                          onClick={() => handleSendMessage(sug)}
-                          className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-white hover:bg-emerald-50 text-slate-700 hover:text-[#058343] border border-slate-200/80 hover:border-emerald-300 transition-colors shadow-2xs"
-                        >
-                          {sug}
-                        </button>
-                      ))}
                     </div>
                   )}
                 </div>
