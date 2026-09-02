@@ -64,10 +64,7 @@ export const WhatsAppFloatingButton: React.FC<WhatsAppFloatingButtonProps> = ({
           {isOpen ? (
             <X className="w-6 h-6 transition-transform group-hover:rotate-90 duration-200" />
           ) : (
-            <div className="relative">
-              <MessageCircle className="w-7 h-7" />
-              <Bot className="w-3.5 h-3.5 absolute -bottom-1 -right-1 text-emerald-200 bg-[#046c36] rounded-full p-0.5" />
-            </div>
+            <Bot className="w-7 h-7" />
           )}
         </button>
     </div>
